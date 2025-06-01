@@ -121,9 +121,53 @@ value = parseFloat('USD23.3'); // NaN yani son faqat matndan oldinga kelsa parse
 
 
 // boolean to number
+value = true;
+value = Number(true); // 1
+value = Number(false); // 0
+value = +true; // 1
+value = +false; // 0
+value = true + true + true; // 3
+value = false - 3; // -3
 
+// undefined to number
+value = Number(undefined); // NaN
+value = +undefined; // NaN
 
+// null to number
+value = Number(null); // 0
+value = +null; // 0
 
+value = undefined + 3; // NaN
+value = null + 3; // 3
+
+// object to number
+value = user;
+value = Number(user); // NaN
+value = Number({}); // NaN
+value = +user; // NaN
+value = +{}; // NaN
+
+// array to number
+value = array;
+value = Number(array); // NaN
+value = +array; // NaN
+value = Number([]); // 0
+value = +[];
+
+value = [] - 3; // -3
+
+// all to boolean
+value = Boolean('hello'); // true
+value = Boolean(''); // false
+value = Boolean(123); // true  
+value = Boolean(-13); // true  
+value = Boolean(0); // false
+value = Boolean(undefined); // false  
+value = Boolean(null); // false  
+value = Boolean(user); // true  
+value = Boolean({}); // true  
+value = Boolean(array); // true  
+value = Boolean([]); // true  
 
 console.log(value);
-console.log(typeof value)
+console.log(typeof value);
